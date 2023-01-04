@@ -3,7 +3,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import CategoriesScreen from "./screens/CategoriesScreen";
 import MealsOverviewScreen from "./screens/MealsOverviewScreen";
-import MealDetailScreen from "./screens/MealDetailScrean";
+import MealDetailScreen from "./screens/MealDetailScreen";
+import { Button } from "react-native";
 
 const Stack = createStackNavigator();
 
@@ -37,7 +38,15 @@ export default function App() {
 						// 	};
 						// }}
 					/>
-					<Stack.Screen name="MealDetail" component={MealDetailScreen} />
+					<Stack.Screen
+						name="MealDetail"
+						component={MealDetailScreen}
+						// options={{
+						// 	headerRight: () => {
+						// 		return <Button title="Tap me!" onPress={() => console.log("Pressed!!!!")} />;
+						// 	},
+						// }}
+					/>
 				</Stack.Navigator>
 			</NavigationContainer>
 		</>
