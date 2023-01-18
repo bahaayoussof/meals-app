@@ -8,6 +8,7 @@ import { MEALS } from "../data/dummy-data";
 
 const MealDetailScreen = ({ route, navigation }) => {
 	const mealId = route.params.mealId;
+	const selectedMeal = MEALS.find(meal => meal.id === mealId);
 
 	const headerButtonPressHandler = () => {
 		navigation.navigate("MealsCategories");
@@ -18,10 +19,10 @@ const MealDetailScreen = ({ route, navigation }) => {
 			headerRight: () => {
 				return <IconButton icon="star" color="white" onPress={headerButtonPressHandler} />;
 			},
+			title: selectedMeal.title,
 		});
 	}, [navigation, headerButtonPressHandler]);
 
-	const selectedMeal = MEALS.find(meal => meal.id === mealId);
 
 	return (
 		<ScrollView style={styles.rootContainer}>
