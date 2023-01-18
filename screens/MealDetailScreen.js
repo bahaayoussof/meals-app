@@ -81,4 +81,3 @@ const styles = StyleSheet.create({
 	},
 });
 
-// #e2b497

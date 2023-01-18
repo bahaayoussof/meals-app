@@ -16,11 +16,11 @@ const styles = StyleSheet.create({
 		paddingVertical: 4,
 		marginVertical: 4,
 		marginHorizontal: 12,
-    backgroundColor: "#e2b497",
-    borderRadius: 6,
+		backgroundColor: "#AEBDCA",
+		borderRadius: 6,
 	},
 	itemText: {
-		color: "#351401",
+		color: "#334756",
 		textAlign: "center",
 	},
 });
